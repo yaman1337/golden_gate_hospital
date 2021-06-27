@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment -NepMeds</title>
+
+    <!-- header icon -->
+    <link rel="icon" href="./img/logo.png">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <!-- css files -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/navbar.css">
+
+</head>
+
+<body>
+
+    <!-- navbar section -->
+
+    <header>
+        <div class="nav-top">
+            <div class="logo">
+                <a href="/"><img src="./img/logo.png" alt="NepMeds Logo"></a>
+                <span class="logo">NepMeds</span>
+            </div>
+            <div class="phone">
+                <div class="phone-icon">
+                    <i class="fas fa-phone-alt"></i>
+                </div>
+                <span><a href="tel:9800000000">98 000 000</a></span>
+            </div>
+            <div class="email">
+                <div class="email-icon">
+                    <i class="far fa-envelope"></i>
+                </div>
+                <span><a href="mailto:nepmeds@gmail.com">nepmeds@gmail.com</a></span>
+            </div>
+            <div class="clock">
+                <div class="clock-icon">
+                    <i class="far fa-clock"></i>
+                </div>
+                <span><a href="#">24 x 7</a></span>
+            </div>
+        </div>
+
+        <div class="nav-bottom">
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/index.html#services">Services</a></li>
+                    <li><a href="/index.html#faq">FAQ</a></li>
+                    <li><a class="active" href="#">Queries</a></li>
+                    <li><a href="/diseases.html">Diseases</a></li>
+                </ul>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search....">
+            </div>
+        </div>
+    </header>
+
+    <!-- queires page -->
+    <div class="queries">
+        <div class="title">
+            <h3>Ask us anything</h3>
+        </div>
+        <div class="form">
+            <div class="input">
+                <label for="fullname">Fullname:</label>
+                <input type="text" id="fullname" placeholder="fullname" class="fullname">
+            </div>
+            <div class="input">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Email" class="email">
+            </div>
+            <div class="input">
+                <label for="phone">Phone:</label>
+                <input type="number" placeholder="Phone number" id="phone" class="phone">
+            </div>
+            <div class="input">
+                <label for="problem">Problem:</label>
+                <input type="text" id="problem" class="problem" placeholder="Your problem">
+            </div>
+            <div class="input">
+                <label for="description">Description:</label>
+                <textarea name="description" id="description" cols="100" rows="5" placeholder="Please describe your problem..."></textarea>
+            </div>
+            <div class="send_button">
+                <button id="sendBtn">
+                    Send
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/FormValidator.js"></script>
+
+</html>

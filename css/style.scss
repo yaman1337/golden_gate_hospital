@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+// page initialization
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-padding-top: 140px;
+    scroll-behavior: smooth;
+}
+
+// home page css
+.home {
+    margin-top: 140px;
+    min-height: calc(110vh - 140px);
+    z-index: -1;
+}
+
+.hero1 {
+    background-image: url('../img/hero1.webp');
+    height: 79vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: color-dodge;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    align-items: center;
+    position: relative;
+}
+
+.hero1 h1 a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-shadow: 4px 4px 10px #49CB3E;
+}
+
+.cards {
+    display: flex;
+    margin-top: 35px;
+}
+
+.card1,
+.card3 {
+    height: 300px;
+    width: 320px;
+    border-radius: 5px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.card2 {
+    height: 350px;
+    width: 320px;
+    border-radius: 5px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.card1 {
+    background-color: #2895f1;
+}
+
+.card2 {
+    background-color: #0071d1;
+    img {
+        height: 100px;
+    }
+}
+
+.card3 {
+    background-color: #0060b1;
+}
+
+.card1,
+.card2,
+.card3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+
+.description {
+    font-weight: lighter;
+    margin-top: 5px;
+}
+
+.card1 img,
+.card3 img {
+    height: 100px;
+}
+
+// service page css
+.services {
+    min-height: 110vh;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.service-logo {
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    align-items: center;
+    .service-logo2 {
+        height: 200px;
+        object-fit: contain;
+    }
+    .serviceText {
+        margin-top: 30px;
+        border-bottom: 5px solid #49CB3E;
+        border-radius: 5px;
+        letter-spacing: 3px;
+    }
+}
+
+.service-section-1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.service-section-1-text,
+.service-section-1-image {
+    flex: 5;
+    height: 85vh;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-bottom: 2px dotted gray;
+}
+
+.service-section-1-text {
+    padding: 0px 10px;
+    h3 {
+        color: #157fda;
+        letter-spacing: 3px;
+    }
+    h2 {
+        color: grey;
+        letter-spacing: 3px;
+    }
+    p {
+        margin-top: 10px;
+        font-size: 1rem;
+        color: #999;
+        text-align: left;
+    }
+    button {
+        height: 50px;
+        width: 40%;
+        background: #157fda;
+        border: none;
+        outline: none;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+        font-size: 1.3rem;
+        cursor: pointer;
+        margin: 10px;
+        transition: all .5s;
+    }
+    button:hover {
+        background: #49CB3E;
+    }
+}
+
+.service-section-1-image {
+    iframe {
+        height: 90%;
+    }
+}
+
+.service-cards {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    .card {
+        height: 200px;
+        width: 250px;
+        cursor: pointer;
+        transition: all .5s;
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+        .text {
+            text-align: center;
+            background: #157fda;
+            color: white;
+            margin-top: -5px;
+            padding: 10px;
+        }
+    }
+    .card:hover {
+        transform: scale(1.1);
+    }
+}
+
+// faq page css
+.faq {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 60px;
+    .title {
+        border-bottom: 4px solid #157fda;
+        color: gray;
+        margin-bottom: 30px;
+    }
+    .accordion {
+        width: 700px;
+        border-bottom: 1px solid lightgray;
+        .accordion_header {
+            min-height: 50px;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: 3px 3px 10px rgba(122, 122, 122, 0.3);
+            cursor: pointer;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+            .fas {
+                transition: all .3s ease-in-out;
+            }
+            .fas.open {
+                transform: rotate(180deg);
+            }
+            button {
+                min-height: 50px;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 30px;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                background-color: #fff;
+            }
+        }
+        .accordion_body {
+            padding: 0 1rem;
+            text-align: left;
+            max-height: 0;
+            overflow: hidden;
+            transition: .5s;
+        }
+        .accordion_body.open {
+            max-height: 40rem;
+            padding: 1rem;
+        }
+        .accordion_body::selection {
+            background: none;
+        }
+    }
+}
+
+// appointment page css
+.queries {
+    margin-top: 140px;
+    min-height: calc(100vh - 140px);
+    width: 100%;
+    background-image: url('../img/appointment.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: color-dodge;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 40px;
+    .title {
+        color: white;
+        border-bottom: 1px solid white;
+    }
+    .form {
+        height: 400px;
+        width: 500px;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 10px;
+        padding-top: 30px;
+        .input {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            margin: 4px auto;
+            input {
+                width: 300px;
+                border: none;
+                outline: none;
+                height: 40px;
+                border: 1px solid lightgray;
+                padding-left: 10px;
+            }
+            textarea {
+                border: none;
+                outline: none;
+                border: 1px solid lightgray;
+                margin-left: 20px;
+                resize: none;
+            }
+        }
+        .send_button {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            button {
+                background: linear-gradient(to right, #1d86df 0%, #39b49a 100%);
+                width: 50%;
+                height: 40px;
+                border: none;
+                outline: none;
+                color: white;
+                font-size: 1.2rem;
+                cursor: pointer;
+                margin: 20px;
+            }
+        }
+    }
+}
+
+// css for blogs [disease page]
+.disease {
+    min-height: calc(100vh - 140px);
+    width: 100%;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-weight: lighter;
+        color: gray;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+        margin-bottom: 1px;
+    }
+    h1:hover {
+        border-bottom: 1px solid #157fda;
+    }
+    .disease-cards {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin-top: 20px;
+        .card {
+            height: 200px;
+            width: 250px;
+            margin: 40px 0px 40px 10px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            transition: all .4s ease-in-out;
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+            .text {
+                width: 100%;
+                padding: 10px;
+                background: #157fda;
+                cursor: pointer;
+                bottom: 0;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    span {
+                        color: lightgray;
+                    }
+                }
+            }
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+// disease detail css 
+.disease_detail {
+    min-height: 100vh;
+    width: 100%;
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        font-weight: lighter;
+    }
+    .img {
+        width: 600px;
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+    .text {
+        width: 850px;
+    }
+}
+
+.floater {
+    position: fixed;
+    bottom: 8%;
+    right: 5%;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: #49CB3E;
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    cursor: pointer;
+    box-shadow: 5px 5px 15px #49CB3E;
+    transition: all .5s;
+}
+
+.floater:hover {
+    background: #157fda;
+    box-shadow: 5px 5px 15px #157fda;
+}
