@@ -5,19 +5,19 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    scroll-padding-top: 140px;
+    scroll-padding-top: 120px;
     scroll-behavior: smooth;
 }
 
 // home page css
 .home {
-    margin-top: 140px;
-    min-height: calc(110vh - 140px);
+    margin-top: 120px;
+    min-height: calc(110vh - 120px);
     z-index: -1;
 }
 
 .hero1 {
-    background-image: url('../img/hero1.webp');
+    background-image: url('../img/hero2.jpg');
     height: 79vh;
     width: 100%;
     background-repeat: no-repeat;
@@ -33,9 +33,8 @@
 
 .hero1 h1 a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: bold;
-    text-shadow: 4px 4px 10px #49CB3E;
 }
 
 .cards {
@@ -83,6 +82,15 @@
     text-align: center;
     padding: 10px;
     color: white;
+    opacity: .9;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover {
+    transform: scale(1.1);
 }
 
 .description {
@@ -269,8 +277,8 @@
 
 // appointment page css
 .queries {
-    margin-top: 140px;
-    min-height: calc(100vh - 140px);
+    margin-top: 120px;
+    min-height: calc(100vh - 120px);
     width: 100%;
     background-image: url('../img/appointment.png');
     background-repeat: no-repeat;
@@ -283,16 +291,18 @@
     .title {
         color: white;
         border-bottom: 1px solid white;
+        margin-top: 30px;
     }
     .form {
         height: 400px;
         width: 500px;
-        background: white;
+        background: #ece8e0;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         margin-top: 10px;
         padding-top: 30px;
+        border-radius: 10px;
         .input {
             width: 80%;
             display: flex;
@@ -305,12 +315,17 @@
                 height: 40px;
                 border: 1px solid lightgray;
                 padding-left: 10px;
+                transition: all .3s ease-in-out;
+            }
+            input:focus {
+                border-radius: 5px;
+                border: 4px solid #005059;
             }
             textarea {
                 border: none;
                 outline: none;
                 border: 1px solid lightgray;
-                margin-left: 20px;
+                margin-left: 10px;
                 resize: none;
             }
         }
@@ -336,7 +351,7 @@
 
 // css for blogs [disease page]
 .disease {
-    min-height: calc(100vh - 140px);
+    min-height: calc(100vh - 120px);
     width: 100%;
     margin-top: 150px;
     display: flex;
@@ -397,7 +412,7 @@
 .disease_detail {
     min-height: 100vh;
     width: 100%;
-    margin-top: 140px;
+    // margin-top: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -413,6 +428,33 @@
     }
     .text {
         width: 850px;
+    }
+}
+
+// comment form css
+.comment {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 50px;
+    form {
+        display: flex;
+        textarea {
+            height: 40px;
+            resize: none;
+            margin-right: 10px;
+        }
+        button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background-color: #157fda;
+            color: white;
+            font-size: 1.1rem;
+            padding: 5px;
+            margin-left: 5px;
+        }
     }
 }
 

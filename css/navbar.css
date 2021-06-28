@@ -8,7 +8,7 @@ header {
 }
 
 .nav-top {
-    height: 80px;
+    height: 60px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -96,11 +96,10 @@ header {
     transition: .5s;
 }
 
-
-/* .nav-links ul li a:hover {
-    border: 1px solid white;
+.nav-links ul li a:hover {
+    background: #49CB3E;
     padding: 10px;
-} */
+}
 
 .search input {
     float: right;
